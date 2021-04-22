@@ -26,18 +26,24 @@ public class Main {
 
         List<Persona> personas = new ArrayList<>();
         for (Estudiante aux : estudiantes) {
-            int i = 0;
-            personas.add(estudiantes[i]);
-            i++;
+            personas.add(aux);
         }
-        System.out.println(personas.get(0).getNombre()); // Sysout para validar que se haya guardado bien el arreglo
-                                                         // estudiantes en la lista
-        for (Staff var : equipo) {
-            int i = 0;
-            personas.add(equipo[i]);
-            i++;
+        for (Staff aux : equipo) {
+            personas.add(aux);
         }
-        System.out.println(personas.get(4).getDni());
+        int cantEstudiantes = 0;
+        int cantStaff = 0;
+        for (Persona aux : personas) {
+            if (aux instanceof Estudiante) {
+
+                cantEstudiantes++;
+            } else {
+
+                cantStaff++;
+            }
+        }
+        System.out.println(cantEstudiantes);
+        System.out.println(cantStaff);
     }
 
 }
