@@ -33,17 +33,19 @@ public class Main {
         }
         int cantEstudiantes = 0;
         int cantStaff = 0;
+        double totalRecaudado = 0;
         for (Persona aux : personas) {
             if (aux instanceof Estudiante) {
-
+                int i = 0;
                 cantEstudiantes++;
-            }else if(aux instanceof Staff){
-
+                totalRecaudado = totalRecaudado + estudiantes[i].getCuotaMensual();
+                i++;
+            } else if (aux instanceof Staff)
                 cantStaff++;
-            }
         }
-        System.out.println(cantEstudiantes);
-        System.out.println(cantStaff);
+        System.out.println("Total de estudiantes: " + cantEstudiantes);
+        System.out.println("\nTotal de staff:" + cantStaff);
+        System.out.println("\nTotal recaudado de los alumnos: " + totalRecaudado);
     }
 
 }

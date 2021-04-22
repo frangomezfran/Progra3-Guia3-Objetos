@@ -12,5 +12,7 @@ public class Estudiante extends Persona {
         this.cuotaMensual = coutaMensual;
         this.carrera = carrera;
     }
-
+    public double getCuotaMensual(){
+        return this.cuotaMensual;
+    }
 }
