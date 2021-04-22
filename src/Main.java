@@ -37,7 +37,7 @@ public class Main {
             if (aux instanceof Estudiante) {
 
                 cantEstudiantes++;
-            } else {
+            }else if(aux instanceof Staff){
 
                 cantStaff++;
             }
